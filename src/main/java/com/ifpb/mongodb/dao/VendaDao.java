@@ -5,6 +5,7 @@ import com.ifpb.mongodb.model.Venda;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoCursor;
 import static com.mongodb.client.model.Filters.eq;
+import com.mongodb.client.result.DeleteResult;
 
 
 import java.util.ArrayList;
@@ -37,6 +38,7 @@ public class VendaDao {
     
      public Venda buscarCod(int cod) {
         Venda venda = (Venda) collection.find( eq("codigo", cod)).first(); 
+        
         if(venda != null) {
             return venda;
         }else {
@@ -45,9 +47,11 @@ public class VendaDao {
         
     }
      
-    public boolean deletaCod(int cod){
-        DeleteResult deleteOne = collection.deleteOne(eq ("codigo",codigo));
+    public boolean deletaCod(int cod){        
+        DeleteResult deleteOne = collection.deleteOne(eq ("codigo",cod));
+        
         return deleteOne.getDeletedCount() > 0;
+        
     }
 
     

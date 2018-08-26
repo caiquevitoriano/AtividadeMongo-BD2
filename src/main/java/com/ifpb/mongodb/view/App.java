@@ -28,32 +28,30 @@ public class App {
 //
 //        dao.atualizar(new Pessoa("111.111.111-01",
 //                "João Paulo", 22));
+
+        
         /*
+            Produto produto1 = new Produto(1, "Teclado", 30);
+            Produto produto2 = new Produto(2, "Mouse", 20);
+            Produto produto3 = new Produto(3, "monitor", 800);
+            Produto produto4 = new Produto(3, "cpu", 1000);
 
-        ;
+            ItemVenda item1 = new ItemVenda(produto1, 1);
+            ItemVenda item2 = new ItemVenda(produto2, 2);
+            ItemVenda item3 = new ItemVenda(produto3, 2);
+            ItemVenda item4 = new ItemVenda(produto4, 1);
 
-        System.out.println(dao.listar());
+            List<ItemVenda> itens = new ArrayList<>();
+            itens.add(item1);
+            itens.add(item2);
+            itens.add(item3);
+            itens.add(item4);
 
-        Produto produto1 = new Produto(1, "Teclado", 30);
-        Produto produto2 = new Produto(2, "Mouse", 20);
-        Produto produto3 = new Produto(3, "monitor", 800);
-       
-        
-        ItemVenda item1 = new ItemVenda(produto1, 1);
-        ItemVenda item2 = new ItemVenda(produto2, 2);
-        ItemVenda item3 = new ItemVenda(produto3, 2);
+            Venda venda = new Venda(3, itens, LocalDateTime.now());
+            daoVenda.salvar(venda);
 
-        List<ItemVenda> itens = new ArrayList<>();
-        itens.add(item1);
-        itens.add(item2);
-        itens.add(item3);
-
-        Venda venda = new Venda(2, itens, LocalDateTime.now());
-        daoVenda.salvar(venda);
-
-         */
-        
-        
+            daoVenda.deletaCod(2);        
+        */
         
         System.out.println(daoVenda.buscarCod(2));
 
