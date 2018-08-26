@@ -35,7 +35,20 @@ public class VendaDao {
         return vendas;
     }
     
- 
+     public Venda buscarCod(int cod) {
+        Venda venda = (Venda) collection.find( eq("codigo", cod)).first(); 
+        if(venda != null) {
+            return venda;
+        }else {
+            return null;
+        }
+        
+    }
+     
+    public boolean deletaCod(int cod){
+        DeleteResult deleteOne = collection.deleteOne(eq ("codigo",codigo));
+        return deleteOne.getDeletedCount() > 0;
+    }
 
     
 

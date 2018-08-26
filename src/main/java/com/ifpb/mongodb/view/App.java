@@ -14,12 +14,13 @@ import java.util.List;
 public class App {
 
     public static void main(String[] args) {
+        
+        VendaDao daoVenda = new VendaDao();
 
 //        db.venda.createIndex({codigo: 1})
-        
- //      PessoaDao daoPessoa = new PessoaDao();
+        //      PessoaDao daoPessoa = new PessoaDao();
 //
- //      daoPessoa.salvar(new Pessoa("222.222.222-02", "Maria", 19));
+        //      daoPessoa.salvar(new Pessoa("222.222.222-02", "Maria", 19));
 //
 //      System.out.println(daoPessoa.listar());
 //
@@ -27,26 +28,34 @@ public class App {
 //
 //        dao.atualizar(new Pessoa("111.111.111-01",
 //                "João Paulo", 22));
+        /*
 
-      VendaDao daoVenda = new VendaDao();
+        ;
 
-//        System.out.println(dao.listar());
+        System.out.println(dao.listar());
 
- //          Produto produto1 = new Produto(1, "Teclado", 30);
-//           Produto produto2 = new Produto(2, "Mouse", 20);
-//
-//         ItemVenda item1 = new ItemVenda(produto1, 1);
-//         ItemVenda item2 = new ItemVenda(produto2, 2);
-//
-//        List<ItemVenda> itens = new ArrayList<>();
- //       itens.add(item1);
-//        itens.add(item2);
-//
-//        Venda venda = new Venda(1, itens, LocalDateTime.now());
-//
-//        daoVenda.salvar(venda);
+        Produto produto1 = new Produto(1, "Teclado", 30);
+        Produto produto2 = new Produto(2, "Mouse", 20);
+        Produto produto3 = new Produto(3, "monitor", 800);
+       
+        
+        ItemVenda item1 = new ItemVenda(produto1, 1);
+        ItemVenda item2 = new ItemVenda(produto2, 2);
+        ItemVenda item3 = new ItemVenda(produto3, 2);
 
+        List<ItemVenda> itens = new ArrayList<>();
+        itens.add(item1);
+        itens.add(item2);
+        itens.add(item3);
 
+        Venda venda = new Venda(2, itens, LocalDateTime.now());
+        daoVenda.salvar(venda);
+
+         */
+        
+        
+        
+        System.out.println(daoVenda.buscarCod(2));
 
     }
 
