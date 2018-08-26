@@ -17,6 +17,8 @@ public class App {
         
         VendaDao daoVenda = new VendaDao();
 
+        
+        
 //        db.venda.createIndex({codigo: 1})
         //      PessoaDao daoPessoa = new PessoaDao();
 //
@@ -34,7 +36,7 @@ public class App {
             Produto produto1 = new Produto(1, "Teclado", 30);
             Produto produto2 = new Produto(2, "Mouse", 20);
             Produto produto3 = new Produto(3, "monitor", 800);
-            Produto produto4 = new Produto(3, "cpu", 1000);
+            Produto produto4 = new Produto(4, "cpu", 1000);
 
             ItemVenda item1 = new ItemVenda(produto1, 1);
             ItemVenda item2 = new ItemVenda(produto2, 2);
@@ -53,7 +55,14 @@ public class App {
             daoVenda.deletaCod(2);        
         */
         
-        System.out.println(daoVenda.buscarCod(2));
+        /*
+            System.out.println(daoVenda.buscarCod(1));
+            Produto produto4 = new Produto(4, "cpu", 1000);
+            ItemVenda item4 = new ItemVenda(produto4, 1);
+            daoVenda.inserirItemCod(1, item4);
+            System.out.println(daoVenda.buscarCod(1));
+        */
+        
 
     }
 
